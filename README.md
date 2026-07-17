@@ -1,7 +1,26 @@
-# Tauri + Solid + Typescript
+<div align="center">
 
-This template should help get you started developing with Tauri, Solid and Typescript in Vite.
+# 🎧 Audio Widget
+**Minimalist, Vivid, Fluid, Immersive**
+<!-- Status Badge -->
+<img src="https://img.shields.io/badge/Status-In_Development-yellow?style=for-the-badge&logo=rocket&logoColor=black" alt="Status" />
+---
 
-## Recommended IDE Setup
+### 🛠 Tech Stack
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=rust,tauri,solidjs,typescript,tailwind" alt="stack" />
+</p>
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+### Connect with 👨‍💻 Author
+<a href="https://github.com/flowrfelso" target="_blank">
+  <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+</a>
+<a href="https://fb.com/flowrfelso.f" target="_blank">
+  <img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" alt="Facebook" />
+</a>
+<a href="https://twitter.com/neid_dev" target="_blank">
+  <img src="https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white" alt="Twitter" />
+</a>
+
+</div>
+
