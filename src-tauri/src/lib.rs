@@ -3,6 +3,7 @@ mod events;
 mod platform;
 mod services;
 mod state;
+mod ui;
 
 use tauri::Manager;
 
@@ -20,10 +21,21 @@ use platform::p_windows::audio::AudioListener;
 pub fn run() {
     tauri::Builder::default()
         .setup(|app| {
+            // hardcode
+            if let Some(window) = app.get_webview_window("main") {
+                window.set_always_on_top(true)?;
+            }
+
+            ui::tray::create(app)?;
+
             let manager = AudioListener::start(app.handle().clone())?;
 
             app.manage(state::AudioState {
                 manager: std::sync::Mutex::new(manager),
+            });
+
+            app.manage(state::WindowState {
+                pinned: std::sync::Mutex::new(true),
             });
 
             Ok(())
