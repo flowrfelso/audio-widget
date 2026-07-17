@@ -1,3 +1,4 @@
+mod app;
 mod commands;
 mod events;
 mod platform;
@@ -8,6 +9,7 @@ mod ui;
 use tauri::Manager;
 
 use crate::commands::{audio::*, media::*};
+use app::AppManager;
 
 use platform::p_windows::audio::AudioListener;
 
@@ -21,10 +23,7 @@ use platform::p_windows::audio::AudioListener;
 pub fn run() {
     tauri::Builder::default()
         .setup(|app| {
-            // hardcode
-            if let Some(window) = app.get_webview_window("main") {
-                window.set_always_on_top(true)?;
-            }
+            AppManager::initialize(app.handle())?;
 
             ui::tray::create(app)?;
 
@@ -32,10 +31,6 @@ pub fn run() {
 
             app.manage(state::AudioState {
                 manager: std::sync::Mutex::new(manager),
-            });
-
-            app.manage(state::WindowState {
-                pinned: std::sync::Mutex::new(true),
             });
 
             Ok(())
@@ -59,6 +54,10 @@ pub fn run() {
             current_media_info
         ])
         .plugin(tauri_plugin_opener::init())
+        .plugin(tauri_plugin_autostart::init(
+            tauri_plugin_autostart::MacosLauncher::LaunchAgent,
+            None,
+        ))
         // .invoke_handler(tauri::generate_handler![greet])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

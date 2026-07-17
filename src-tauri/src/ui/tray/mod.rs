@@ -1,6 +1,6 @@
 mod events;
 mod ids;
-mod menu;
+pub mod menu;
 
 use tauri::{tray::TrayIconBuilder, App};
 
