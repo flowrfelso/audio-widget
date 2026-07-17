@@ -1,0 +1,258 @@
+Audio
+✅ Volume
+✅ Mute
+⏳ Per-app Volume
+⏳ Device Switch
+⏳ Default Device
+⏳ Audio Peak Meter
+⏳ Microphone Volume
+⏳ Mic Mute
+Media
+✅ Next
+✅ Previous
+⏳ Play
+⏳ Pause
+⏳ Toggle Play/Pause
+⏳ Stop
+⏳ Seek
+⏳ Timeline
+⏳ Duration
+⏳ Album Art
+⏳ Artist
+⏳ Title
+⏳ Source App
+Window
+✅ Always on top
+⏳ Click through
+⏳ Snap Edge
+⏳ Auto hide
+⏳ Auto fade
+⏳ Magnetic Dock
+
+Phase 2 — Widget Experience ⭐⭐⭐⭐⭐
+
+Đây là phần khiến widget "cao cấp".
+
+Soundwave
+
+Khi có Audio Meter:
+
+▂▃▄▅▆▇█▇▆▅▄▃
+
+Realtime 60fps.
+
+Volume Ripple
+
+Hiện tại mới chỉ là circle.
+
+Có thể làm:
+
+))))))))
+
+
+Lan ra theo volume.
+
+Bass Pulse
+
+Background scale theo RMS.
+
+scale
+
+1.00
+
+1.01
+
+1.03
+
+1.00
+Music Visualizer
+
+Ở center
+
+||||||||
+
+||||
+
+|||||||||||
+Spectrum Ring
+
+Ring xung quanh volume.
+
+Windows 11 style.
+
+Album Glow
+
+Lấy dominant color từ album art.
+
+Glow đổi màu.
+
+Spotify xanh.
+
+Apple đỏ.
+
+Youtube đỏ.
+
+Acrylic Blur động
+
+Blur mạnh khi hover.
+
+Blur nhẹ khi idle.
+
+Dynamic Shadow
+
+Shadow thay đổi theo volume.
+
+Particle
+
+Mute
+
+↓
+
+Particle tan biến.
+
+Volume up
+
+↓
+
+Particle bay ra.
+
+Ripple Material
+
+Không phải chỉ scale.
+
+Mà giống Material 3.
+
+Phase 3 — Audio Engine ⭐⭐⭐⭐⭐
+
+Cái này rất hay.
+
+Peak Meter
+
+Dùng
+
+IAudioMeterInformation
+
+Lấy:
+
+0.73
+
+0.12
+
+0.91
+
+60fps.
+
+FFT
+
+Thực hiện FFT.
+
+Hiển thị
+
+Bass
+
+Mid
+
+Treble
+Beat Detection
+
+Có beat
+
+↓
+
+Glow.
+
+BPM Detection
+
+Tempo.
+
+Silence Detection
+
+Không phát gì
+
+↓
+
+Widget idle.
+
+Phase 4 — Smart Widget ⭐⭐⭐⭐⭐
+
+Ví dụ
+
+Spotify
+
+↓
+
+Center
+
+Album Art
+
+↓
+
+Ring
+
+Progress
+
+↓
+
+Bottom
+
+Lyrics.
+
+Discord Call
+
+↓
+
+Center
+
+Mic
+
+↓
+
+Outer Ring
+
+Mic Level.
+
+Game
+
+↓
+
+Center
+
+Master Volume
+
+↓
+
+Outer Ring
+
+Game Volume.
+
+Phase 5 — Browser
+
+Làm sau cùng.
+
+Chrome.
+
+Edge.
+
+Firefox.
+
+YouTube.
+
+Spotify Web.
+
+Netflix.
+
+Disney.
+
+Nếu là mình phát triển project này
+
+Mình sẽ đóng băng Browser.
+
+Tập trung vào:
+
+CoreAudio
+GSMTC
+UI Animation
+Visualization
+Performance
+
+để tạo ra một widget thật "đã" trước.

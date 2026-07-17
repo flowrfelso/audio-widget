@@ -1,0 +1,43 @@
+use anyhow::Result;
+
+pub struct WindowsAudio;
+
+impl WindowsAudio {
+
+    pub fn new() -> Self {
+
+        Self
+
+    }
+
+    pub fn volume(&self) -> Result<u8> {
+
+        todo!()
+
+    }
+
+    pub fn set_volume(&self, value: u8) -> Result<()> {
+
+        todo!()
+
+    }
+
+    pub fn volume_up(&self, step: u8) -> Result<()> {
+
+        todo!()
+
+    }
+
+    pub fn volume_down(&self, step: u8) -> Result<()> {
+
+        todo!()
+
+    }
+
+    pub fn mute(&self) -> Result<()> {
+
+        todo!()
+
+    }
+
+}
