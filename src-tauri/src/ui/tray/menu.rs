@@ -5,17 +5,13 @@ use tauri::{
 
 use super::ids::*;
 
+#[derive(Clone)]
 pub struct TrayMenu {
     pub menu: Menu<Wry>,
-
     pub pin: CheckMenuItem<Wry>,
-
     pub media: MenuItem<Wry>,
-
     pub settings: MenuItem<Wry>,
-
     pub restart: MenuItem<Wry>,
-
     pub exit: MenuItem<Wry>,
 }
 

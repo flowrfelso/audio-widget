@@ -70,10 +70,10 @@ impl MediaManager {
         }
 
         let info = session.GetPlaybackInfo()?;
-        Ok((PlaybackState {
+        Ok(PlaybackState {
             playing: info.PlaybackStatus()?
                 == GlobalSystemMediaTransportControlsSessionPlaybackStatus::Playing,
-        }))
+        })
     }
 
     pub async fn pause(&self) -> Result<PlaybackState> {
@@ -86,10 +86,10 @@ impl MediaManager {
         }
 
         let info = session.GetPlaybackInfo()?;
-        Ok((PlaybackState {
+        Ok(PlaybackState {
             playing: info.PlaybackStatus()?
                 == GlobalSystemMediaTransportControlsSessionPlaybackStatus::Playing,
-        }))
+        })
     }
 
     pub async fn toggle_play_pause(&self) -> Result<PlaybackState> {

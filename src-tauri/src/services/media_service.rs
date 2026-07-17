@@ -1,9 +1,9 @@
-use std::sync::atomic::AtomicI64;
+// use std::sync::atomic::AtomicI64;
 
 use anyhow::Result;
 
 use crate::{
-    events::{MediaChanged, PlaybackState, TimelineState},
+    events::{MediaChanged, PlaybackState},
     platform::p_windows::media::manager::MediaManager,
 };
 

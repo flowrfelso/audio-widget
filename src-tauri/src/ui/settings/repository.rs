@@ -9,6 +9,11 @@ pub struct SettingsRepository {
 }
 
 impl SettingsRepository {
+    pub fn initialize(&self) -> Result<()> {
+        let _ = self.load()?;
+        Ok(())
+    }
+
     pub fn new() -> Result<Self> {
         let dir = dirs::config_dir().unwrap().join("AudioWidget");
 
@@ -34,9 +39,13 @@ impl SettingsRepository {
     }
 
     pub fn save(&self, settings: &Settings) -> Result<()> {
+        if let Some(parent) = self.path.parent() {
+            std::fs::create_dir_all(parent)?;
+        }
+
         let json = serde_json::to_string_pretty(settings)?;
 
-        fs::write(&self.path, json)?;
+        std::fs::write(&self.path, json)?;
 
         Ok(())
     }

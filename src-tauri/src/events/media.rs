@@ -14,9 +14,3 @@ pub struct MediaChanged {
 pub struct PlaybackState {
     pub playing: bool,
 }
-
-#[derive(Clone, Serialize)]
-pub struct TimelineState {
-    pub position_ms: u64,
-    pub duration_ms: u64,
-}

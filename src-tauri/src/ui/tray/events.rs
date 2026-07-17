@@ -1,7 +1,8 @@
 use tauri::{menu::MenuEvent, AppHandle, Manager, Wry};
 
 use crate::{
-    services::window_service::WindowService, ui::settings::repository::SettingsRepository,
+    services::window_service::WindowService,
+    ui::{settings::repository::SettingsRepository, window::labels},
     AppManager,
 };
 
@@ -17,7 +18,10 @@ pub fn on_menu_event(
 
         MEDIA => {}
 
-        SETTINGS => {}
+        SETTINGS => {
+            // let _ = WindowService::show_settings(app);
+            let _ = WindowService::show(app, labels::SETTINGS);
+        }
 
         RESTART => {
             app.restart();

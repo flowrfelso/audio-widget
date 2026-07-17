@@ -1,5 +1,5 @@
 use crate::{
-    events::{MediaChanged, PlaybackState, TimelineState},
+    events::{MediaChanged, PlaybackState},
     services::media_service::MediaService,
 };
 

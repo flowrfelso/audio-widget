@@ -8,7 +8,10 @@ mod ui;
 
 use tauri::Manager;
 
-use crate::commands::{audio::*, media::*};
+use crate::{
+    commands::{audio::*, media::*, settings::*},
+    state::tray::TrayState,
+};
 use app::AppManager;
 
 use platform::p_windows::audio::AudioListener;
@@ -25,9 +28,13 @@ pub fn run() {
         .setup(|app| {
             AppManager::initialize(app.handle())?;
 
-            ui::tray::create(app)?;
+            let tray = ui::tray::create(app)?;
 
             let manager = AudioListener::start(app.handle().clone())?;
+
+            app.manage(TrayState {
+                pin: tray.pin.clone(),
+            });
 
             app.manage(state::AudioState {
                 manager: std::sync::Mutex::new(manager),
@@ -51,7 +58,9 @@ pub fn run() {
             seek_forward_30,
             seek_back_10,
             seek_back_30,
-            current_media_info
+            current_media_info,
+            get_settings,
+            update_setting
         ])
         .plugin(tauri_plugin_opener::init())
         .plugin(tauri_plugin_autostart::init(
